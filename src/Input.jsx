@@ -3,9 +3,11 @@ import colorNames from 'colornames';
 
 const Input = ({ colorValue, setHexValue, setColorValue, isDarkText, setIsDarkText }) => {
   return (
-    <form onSubmit={(e) => e.preventDefault()} className="flex justify-center mt-10 space-x-10">
+
+    <form onSubmit={(e) => e.preventDefault()} className="flex justify-center mt-20 space-x-10">
       <input
-        className="border border-black p-3 rounded-md"
+        className="bg-blue-200 p-3 rounded-md shadow-md"
+
         autoFocus
         type="text"
         placeholder="Add Color"
@@ -16,7 +18,9 @@ const Input = ({ colorValue, setHexValue, setColorValue, isDarkText, setIsDarkTe
           setHexValue(colorNames(e.target.value));
         }}
       />
-      <button className="bg-blue-300 p-3 rounded-md font-semibold shadow-md hover:bg-blue-400 text-white" onClick={() => setIsDarkText(!isDarkText)}>
+
+      <button className="bg-blue-200 p-3 rounded-md shadow-md font-semibold" onClick={() => setIsDarkText(!isDarkText)}>
+
         Toogle Text Color
       </button>
     </form>
